@@ -1,0 +1,173 @@
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Courier New';
+    min-height: 100vh;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: linear-gradient(#a5a59f, #c9c4be);
+}
+
+header{
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ico{
+    margin: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.pages{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    align-items: center;
+    gap: 50px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.page:hover{
+    color: rgb(54, 54, 219);
+}
+
+.connexion{
+    align-items: center;
+    margin-right: 10px;
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    border-radius: 10px;
+    height: 30px;
+    padding: 5px;
+}
+
+.connexion:hover{
+    border-color: rgb(107, 107, 211);
+}
+
+a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+.log{
+    color: rgb(54, 54, 219);
+}
+
+.log:hover{
+    color: rgb(107, 107, 211);
+}
+
+#Boutton{
+    text-decoration: none;
+    font-size: large;
+    color: rgb(54, 54, 219);
+    padding: 15px;
+    border: solid 2px rgb(54, 54, 219);
+    border-radius: 10px;    
+}
+
+#Boutton:hover{
+    color: rgb(107, 107, 211);
+    border-color: rgb(107, 107, 211);;
+}
+
+h2{
+    width: 400px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+
+.welcome{
+    margin-left: 200px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.texte{
+    width: 400px;
+}
+
+.gauche{
+    width: 400px;
+}
+
+.demflex{
+    font-family: Arial;
+    display: flex;
+    gap: 5px;
+    margin-left: 200px;
+}
+
+.minion1{
+    font-size: larger;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 20px;
+    border: solid 2px rgb(56, 132, 219);
+    background-color: rgb(56, 132, 219);
+    border-radius: 5.5px;
+    height: 20px;
+    width: 100px;
+    margin-left: auto;
+}
+
+.minion2{
+    font-size: larger;
+    gap: 20px;
+    border: solid 2px rgb(56, 132, 219);
+    border-radius: 5.5px;
+    padding: 5px;
+    height: 20px;
+    width: 190px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.svg{
+    width: auto;
+}
+
+.grandpapa{
+    display: flex;
+}
+
+.droite{
+    margin-left: 300px;
+    margin-top: 100px;
+}
+
+.background{
+    width: auto;    
+    padding: 60px;
+    background-color: #c9c4be;
+}
+
+.cercle{
+    background: linear-gradient(#d42dda, #24a5cc);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 150px;
+}

@@ -1,0 +1,53 @@
+body{
+    margin: 0px;
+    background-color:  #F0F0F0;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+h1{
+    margin: 0px;
+}
+
+header{
+    padding: 25px;
+    height: 25px;
+    background-color: #ee4343;
+    box-shadow: 0px 2px 5px rgb(0, 0, 0);
+    margin-bottom: 20px;
+}
+
+.carré{
+    background-color: blueviolet;
+    border: solid 5px;
+    border-radius: 20px;
+    font-size: 20px;
+    margin-bottom: 25px;
+    padding: 50px;
+    box-shadow: 0px 5px 2px rgb(116, 116, 116);
+}
+
+.bébé{
+    background-color: blueviolet;
+    border: solid 5px;
+    font-size: 20px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    padding: 50px;
+    box-shadow: 0px 5px 2px rgb(116, 116, 116);
+}
+
+#bébé{
+    max-width: 100%;  
+    height: auto;  
+    padding: 10px;
+}
+
+.papa{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500px;
+    margin-left: 450px;
+    border-left: dotted 5px;
+    border-right: double 5px;
+}

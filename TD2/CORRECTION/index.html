@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title></title>
+		<style>
+			body{
+				background: #673AB7;
+				font-family: arial;
+				color:#FFF;
+				margin:0;
+			}
+			h1{
+				background: #E91E63;
+				margin:0;
+				padding:30px;
+			}
+			p{
+				margin: 20px;
+				border: 5px solid;
+				padding:20px;
+				text-align: center;
+			}
+			.par_deux{
+				width:200px;
+				display:inline-block;
+			}
+			
+		/***********************/
+		/* Utilisation du Flex */
+		/***********************/
+		
+			.flex{
+				display: flex;
+				border: 5px dashed #FFF;
+				margin:20px;
+			}
+			.boite{
+				padding: 40px;
+				margin:5px;
+				background: #FFF;
+				color:#000;
+			}
+			.espace{
+				justify-content: space-between;
+			}
+			.grand{
+				flex: 1;
+			}
+			.marge{
+				margin-left: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Maouw</h1>
+		<p class="par_deux">Et oui !</p>
+		<p class="par_deux">C'est moi le chat.</p>
+		<p>Grou grou !</p>
+		
+		<div class="flex">
+			<div class="boite">Bla bla</div>
+			<div class="boite">Bla bla</div>
+			<div class="boite">Bla bla</div>
+		</div>
+	<!-- ------------------------------------------- -->
+	<!-- On peut mettre deux classes dans une balise -->
+	<!-- ------------------------------------------- -->
+		<div class="flex espace">
+			<div class="boite">Bla bla</div>
+			<div class="boite">Bla bla</div>
+			<div class="boite">Bla bla</div>
+		</div>
+		
+		<div class="flex">
+			<div class="boite grand">Bla bla</div>
+			<div class="boite grand">Bla bla</div>
+			<div class="boite grand">Bla bla</div>
+		</div>
+		
+		<div class="flex">
+			<div class="boite">Bla bla</div>
+			<div class="boite">Bla bla</div>
+			<div class="boite marge">Bla bla</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,99 @@
+header{
+    background-color: #000000;
+    text-align: center;
+}
+
+#header_image{
+    text-align: center;
+}
+
+img{
+    width: 50px;
+}
+
+#header_image:hover{
+    background-color:  rgb(19, 4, 17);
+}
+
+body{
+    background-color: #111111;
+    color: azure;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+    margin: 0px;
+    top: 0px;
+}
+
+.Welcome1{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.Welcome2{
+    margin-bottom: 100px;
+}
+
+h1{
+    text-align: center;
+    text-size-adjust: auto;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+p{
+    text-align: center;
+    font-size: 18px;
+}
+
+.purple_h1{
+    block-size: 100%;
+}
+
+.purple{
+    font-size: 20px;
+}
+
+h1 span{
+    color: #553986;
+}
+
+p span{
+    color: #553986;
+}
+
+h2{
+    color: #553986;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: underline;
+    margin-bottom: 50px;
+}
+
+#cases{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.case_1{
+    padding: 40px;
+    margin: 20px;
+    border: 5px dashed;
+    background-color: aqua;
+}
+
+.case_2{
+    padding: 40px;
+    margin: 20px;
+    border: 5px dashed;
+    background-color: gold;
+}
+
+.case_3{
+    padding: 40px;
+    margin: 20px;
+    border: 5px dashed;
+    background-color: green;
+}
