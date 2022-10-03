@@ -1,2 +1,2 @@
 # Web
-HTML/CSS coding with the IUT.
+HTML/CSS coding in the IUT.
