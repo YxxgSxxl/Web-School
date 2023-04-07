@@ -1,6 +1,6 @@
 // Enter The Wired Click
-let enter = document.querySelector(".enterwired");
+let enter = document.querySelector("div.enterwired");
 
-element.addEventListener-'click', (enter) => {
-    console.log("okay");;
-}
+enter.addEventListener('click', () => {
+    document.querySelector("div.enterwired").remove();
+})
