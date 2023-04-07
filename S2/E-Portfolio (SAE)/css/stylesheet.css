@@ -1,0 +1,56 @@
+@font-face {
+    font-family: "PLANK__";
+    src: url(/fonts/PLANK__.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000000;
+}
+
+h1 {
+    font-family: "PLANK__";
+    font-size: 50px;
+    font-weight: 100;
+    color: white;
+    text-align: center;
+}
+
+header {
+    height: 80px;
+    background-color: transparent;
+    color: white;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+li {
+    list-style-type: none;
+    font-family: "PLANK__";
+    font-size: 40px;
+}
+
+.back-vid {
+    width: 100%;
+    height: 100vh;
+    opacity: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: fill;
+}
