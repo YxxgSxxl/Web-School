@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "PLANK__";
-    src: url(/fonts/PLANK__.otf);
+    font-family: "Kusanagi";
+    src: url(/fonts/Kusanagi.otf);
 }
 
 * {
@@ -15,17 +15,23 @@ body {
 }
 
 h1 {
-    font-family: "PLANK__";
+    font-family: "Kusanagi";
     font-size: 50px;
-    font-weight: 100;
     color: white;
     text-align: center;
+}
+
+h2 {
+    font-family: "Kusanagi";
+    font-size: 35px;
+    color: white;
 }
 
 header {
     height: 80px;
     background-color: transparent;
     color: white;
+    margin-bottom: 50px;
 }
 
 ul {
@@ -36,7 +42,7 @@ ul {
 
 li {
     list-style-type: none;
-    font-family: "PLANK__";
+    font-family: "Kusanagi";
     font-size: 40px;
 }
 
@@ -53,4 +59,11 @@ li {
     justify-content: center;
     align-items: center;
     object-fit: fill;
+}
+
+.enterwired {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
