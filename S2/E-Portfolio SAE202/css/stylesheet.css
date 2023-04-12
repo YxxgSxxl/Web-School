@@ -141,8 +141,9 @@ a {
 
 /* MAIN SECTION */
 .page_show {
-    background: yellow;
+    background: transparent;
     padding: 50px;
+    
     transform: scale(0);
     transition: 1s;
     transition-delay: 4s;
