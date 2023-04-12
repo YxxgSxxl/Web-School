@@ -14,6 +14,13 @@ body {
     background-color: #000000;
 }
 
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 h1 {
     font-family: "Kusanagi";
     font-size: 35px;
@@ -21,10 +28,12 @@ h1 {
 }
 
 header {
-    height: 80px;
     background-color: transparent;
     color: white;
-    margin-bottom: 50px;
+
+    transform: scale(0);
+    transition: 1s;
+    transition-delay: 3s;
 }
 
 ul {
@@ -73,10 +82,12 @@ a {
 }
 
 @keyframes enteranim {
+
     100%,
     0% {
         transform: translateY(0px);
     }
+
     100% {
         transform: translateY(-10px);
     }
@@ -115,12 +126,28 @@ a {
         opacity: 0;
         transform: rotate(45deg) translate(-20px, -20px);
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
         transform: rotate(45deg) translate(20px, 20px);
     }
 }
+
 /* Enter The Wired Arrow End*/
+
+/* MAIN SECTION */
+.page_show {
+    background: yellow;
+    padding: 50px;
+    transform: scale(0);
+    transition: 1s;
+    transition-delay: 4s;
+}
+
+.show {
+    transform: scale(1);
+}
