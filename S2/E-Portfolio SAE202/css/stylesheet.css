@@ -50,6 +50,7 @@ li {
 
 a {
     text-decoration: none;
+    color: white;
 }
 
 .back-vid {
@@ -143,10 +144,13 @@ a {
 .page_show {
     background: transparent;
     padding: 50px;
-    
     transform: scale(0);
     transition: 1s;
     transition-delay: 4s;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    align-items: center;
 }
 
 .show {
