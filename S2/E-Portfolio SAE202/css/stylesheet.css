@@ -36,12 +36,6 @@ header {
     transition-delay: 3s;
 }
 
-ul {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-}
-
 li {
     list-style-type: none;
     font-family: "Kusanagi";
@@ -143,6 +137,7 @@ a {
 /* MAIN SECTION */
 .page_show {
     background: transparent;
+    height: 100vh;
     padding: 50px;
     transform: scale(0);
     transition: 1s;
@@ -155,4 +150,23 @@ a {
 
 .show {
     transform: scale(1);
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 200px;
+}
+
+li a {
+    font-size: 30px;
+    transition: ease 0.5s;
+}
+
+li a:hover {
+    font-size: 35px;
 }

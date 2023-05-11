@@ -1,22 +1,3 @@
-// Enter The Wired Click
-let enter = document.querySelector("div.enterwired");
-
-enter.addEventListener('click', () => {
-    document.querySelector("div.enterwired").remove();
-
-    document.querySelector(".back-vid").innerHTML =
-        `<div class="back-vid">
-        <video autoplay muted plays-inline class="back-vid">
-            <source src="./img/video/back-vid-2.mp4" type="video/mp4">
-        </video>
-    </div>`;
-
-    setTimeout(matrix, 4000);
-
-    document.querySelector("ul").classList.add("show");
-    document.querySelector(".page_show").classList.add("show");
-})
-
 // Matrix Background Effect
 function matrix() {
     var canvas = document.getElementById('canvas'),
