@@ -1,5 +1,7 @@
 setTimeout(matrix, 2000);
 
+document.querySelector(".page_show").classList.add("show");
+
 // Matrix Background Effect
 function matrix() {
     var canvas = document.getElementById('canvas'),
