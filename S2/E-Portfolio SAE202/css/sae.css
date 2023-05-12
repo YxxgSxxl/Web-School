@@ -53,6 +53,59 @@ label {
     margin-right: 50px;
 }
 
+/* SAE's List random letters */
+.decode-text {
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.space {
+    display: inline-block;
+    width: 10px;
+}
+
+.text-animation {
+    display: inline-block;
+    position: relative;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+
+    &:before {
+        content: "";
+        color: rgb(255, 255, 255);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background: #0e182d;
+        width: 0;
+        height: 1.2em;
+        -webkit-transform: translate(-50%, -55%);
+        -ms-transform: translate(-50%, -55%);
+        transform: translate(-50%, -55%);
+    }
+
+    &.state-1 {
+        &:before {
+            width: 1px;
+        }
+    }
+
+    &.state-2 {
+        &:before {
+            width: 0.9em;
+        }
+    }
+
+    &.state-3 {
+        color: rgb(255, 255, 255);
+
+        &:before {
+            width: 0;
+        }
+    }
+}
+
 .zoneFiltres {
     font-size: larger;
     text-decoration: none;
