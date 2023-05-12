@@ -11,32 +11,28 @@
 
 <body>
     <div class="page_show">
-        About Page
+        <h1>About Page</h1>
+    </div>
 
-        <!-- Smoke Background -->
+    <!-- Smoke Background
+    <div class="smokebg">
         <style>
             * {
                 box-sizing: border-box;
             }
 
-            html,
-            body {
-                margin: 0;
-                min-height: 100vh;
-                overflow: hidden;
-                touch-action: none;
-            }
-
             canvas {
                 width: 100%;
                 height: auto;
-                object-fit: contain;
+                object-fit: cover;
+                filter: opacity(1);
             }
         </style>
         <script>
             window.console = window.console || function (t) { };</script>
         <script>
-            if (document.location.search.match(/type=embed/gi)) { window.parent.postMessage("resize", "*"); }</script>
+            if (document.location.search.match(/type=embed/gi)) { window.parent.postMessage("resize", "*"); }
+        </script>
         </head>
 
         <body translate="no">
@@ -44,33 +40,33 @@
             <script id="rendered-js">
                 const canvas = window.canvas; const gl = canvas.getContext("webgl2"); const dpr = Math.max(1, .5 * window.devicePixelRatio);
                 const touches = new Map(); const vertexSource = `#version 300 es
-           #ifdef GL_FRAGMENT_PRECISION_HIGH
-           precision highp float;
-           #else
-           precision mediump float;
-           #endif
-           in vec2 position;void main(void) {gl_Position = vec4(position, 0., 1.);}`;
+       #ifdef GL_FRAGMENT_PRECISION_HIGH
+       precision highp float;
+       #else
+       precision mediump float;
+       #endif
+       in vec2 position;void main(void) {gl_Position = vec4(position, 0., 1.);}`;
                 const fragmentSource = `#version 300 es
-           #ifdef GL_FRAGMENT_PRECISION_HIGH
-           precision highp float;
-           #else
-           precision mediump float;
-           #endif
-           out vec4 fragColor;uniform vec2 resolution;uniform float time;uniform int pointerCount;
-           const vec3 re=vec3(6,4,6)*1.25;const vec3 boxsize=vec3(1,1.25,1);const float walleps=1e-3;
-           #define T time
-           
-           
-           
-           
-           
-           float box(vec3 p,vec3 s,float r) {p=p-7.7;return length(max(p,0.1))+p.x*0.15;}float mat=.0;float map(vec3 p)
-            {float d=50.0, rm=-box(p,re,1.5);d=min(d, rm); return d;}vec3 blue(vec2 uv)  {vec2  n=vec2(0), q=vec2(0); uv*=0.8;float d=dot(uv,uv),s=8.8, 
-           a=0.02, b=sin(T*0.2)*0.5, t=T;mat2 m=mat2(.6,1.2,-1.2,.6); for (float i=.0; i<30.; i++) {n*=m;  q=uv*s-t+b+i+n; 
-            a+=dot(cos(q)/s,vec2(.2)); n-=sin(q); s*=1.2;} vec3 col=vec3(4)*(a+.2)+a+a; return col;}vec3 nm(vec3 p){ float d=map(p); vec3 n=d-vec3(1); 
-           return n;}void main(void){vec2 uv = (gl_FragCoord.xy-.5*resolution)/min(resolution.x, resolution.y);vec3 col=vec3(0), ro=vec3(0,.5,1.6),
-           rd=normalize(vec3(uv,1)+0.6); vec3 p=ro;  const float steps=180.0; float dd=1.0;for (float i=.0; i<steps; i++){ float d=map(p); if (d<1e-2) 
-           {vec3 n=nm(p);{if (p.z>(1.0)) {col+=blue(p.xy*0.2)-clamp(dd/16.6,.0,1.0);}; break;}}p+=rd*d;dd+=d;}fragColor=vec4(col,1);}`;
+       #ifdef GL_FRAGMENT_PRECISION_HIGH
+       precision highp float;
+       #else
+       precision mediump float;
+       #endif
+       out vec4 fragColor;uniform vec2 resolution;uniform float time;uniform int pointerCount;
+       const vec3 re=vec3(6,4,6)*1.25;const vec3 boxsize=vec3(1,1.25,1);const float walleps=1e-3;
+       #define T time
+       
+       
+       
+       
+       
+       float box(vec3 p,vec3 s,float r) {p=p-7.7;return length(max(p,0.1))+p.x*0.15;}float mat=.0;float map(vec3 p)
+        {float d=50.0, rm=-box(p,re,1.5);d=min(d, rm); return d;}vec3 blue(vec2 uv)  {vec2  n=vec2(0), q=vec2(0); uv*=0.8;float d=dot(uv,uv),s=8.8, 
+       a=0.02, b=sin(T*0.2)*0.5, t=T;mat2 m=mat2(.6,1.2,-1.2,.6); for (float i=.0; i<20.; i++) {n*=m;  q=uv*s-t+b+i+n; 
+        a+=dot(cos(q)/s,vec2(.2)); n-=sin(q); s*=1.2;} vec3 col=vec3(4)*(a+.2)+a+a; return col;}vec3 nm(vec3 p){ float d=map(p); vec3 n=d-vec3(1); 
+       return n;}void main(void){vec2 uv = (gl_FragCoord.xy-.5*resolution)/min(resolution.x, resolution.y);vec3 col=vec3(0), ro=vec3(0,.5,1.6),
+       rd=normalize(vec3(uv,1)+0.6); vec3 p=ro;  const float steps=180.0; float dd=1.0;for (float i=.0; i<steps; i++){ float d=map(p); if (d<1e-2) 
+       {vec3 n=nm(p);{if (p.z>(1.0)) {col+=blue(p.xy*0.2)-clamp(dd/16.6,.0,1.0);}; break;}}p+=rd*d;dd+=d;}fragColor=vec4(col,1);}`;
 
                 let time; let buffer; let program; let resolution; let vertices = [];
                 function resize() {
@@ -147,8 +143,9 @@
                 }
 
                 document.body.onload = init;
-                window.onresize = resize;</script>
-    </div>
+                window.onresize = resize;
+            </script>
+    </div> -->
 
     <script src="./js/index.js"></script>
 </body>
