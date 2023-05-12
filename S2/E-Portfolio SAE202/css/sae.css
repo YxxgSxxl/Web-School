@@ -38,10 +38,11 @@ main {
     display: flex;
     gap: 50px;
     justify-content: left;
+    align-items: center;
     text-align: center;
 
     padding-left: 100px;
-    padding-right: 660px;
+    padding-right: 550px;
 }
 
 main div {
