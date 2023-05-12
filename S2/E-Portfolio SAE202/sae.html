@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,22 +8,28 @@
     <link rel="stylesheet" href="./css/sae.css">
     <title>SAE</title>
 </head>
+
 <body>
     <div class="page_show">
+
+        <!-- For Matrix BG -->
+        <canvas id="canvas">Canvas is not supported in your browser.</canvas>
+        <canvas id="canvas2">Canvas is not supported in your browser.</canvas>
+
         <div class="zoneFiltres">
             <input type="checkbox" name="FiltreS1" id="S1">
             <label for="S1">S1</label>
-        
+
             <input type="checkbox" name="FiltreS2" id="S2">
             <label for="S2">S2</label>
-        
+
             <input type="checkbox" name="FiltreS3" id="S3">
             <label for="S3">S3</label>
-        
+
             <input type="checkbox" name="FiltreS4" id="S4">
             <label for="S4">S4</label>
         </div>
-        
+
         <main>
             <div class="S1 SAE101">SAE1.01</div>
             <div class="S1 SAE102">SAE1.02</div>
@@ -36,6 +43,8 @@
             <div class="S2">SAE2.04</div>
         </main>
     </div>
-    
+
+    <script src="./js/sae.js"></script>
 </body>
+
 </html>

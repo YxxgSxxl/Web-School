@@ -1,3 +1,5 @@
+setTimeout(matrix, 2000);
+
 // Matrix Background Effect
 function matrix() {
     var canvas = document.getElementById('canvas'),
@@ -69,7 +71,7 @@ function matrix() {
 
     var update = function () {
 
-        ctx.fillStyle = "rgba(0,0,0,0.05)";
+        ctx.fillStyle = "rgba(0,0,0,0.10)";
         ctx.fillRect(0, 0, cw, ch);
 
         ctx2.clearRect(0, 0, cw, ch);
