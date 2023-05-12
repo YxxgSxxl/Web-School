@@ -39,7 +39,7 @@ function matrix() {
     let color = `rgb(${colorRand()},${colorRand()},${colorRand()})`;
 
     function colorRand() {
-        return Math.floor(100 + Math.random() * 156);
+        return Math.floor(100 + Math.random() * 220);
     }
     const random_hex_color_code = () => {
         let n = (Math.random() * 0xfffff * 1000000).toString(16);
