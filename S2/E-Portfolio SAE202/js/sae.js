@@ -1,6 +1,13 @@
 setTimeout(matrix, 2000);
+setTimeout(show2steps, 1500);
 
 document.querySelector(".page_show").classList.add("show");
+document.querySelector("footer").classList.add("show");
+
+// Show the footer with little animations
+function show2steps() {
+    document.querySelector("footer").classList.add("show2");
+}
 
 // Matrix Background Effect
 function matrix() {

@@ -21,10 +21,83 @@ canvas {
 body {
     font-family: 'Courier New', Courier, monospace;
     background-color: #000000;
+    overflow: hidden;
 }
 
 h1 {
     font-family: "Kusanagi";
     font-size: 35px;
     color: white;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 150px;
+    margin-left: 50px;
+}
+
+main {
+    display: flex;
+    gap: 50px;
+    justify-content: left;
+    text-align: center;
+
+    padding-left: 100px;
+    padding-right: 660px;
+}
+
+main div {
+    font-size: larger;
+}
+
+label {
+    margin-right: 50px;
+}
+
+.zoneFiltres {
+    font-size: larger;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: left;
+    text-align: center;
+    padding: 5px;
+    gap: 10px;
+
+    margin-left: 100px;
+    margin-bottom: 50px;
+}
+
+.page_show {
+    margin-top: 50px;
+    color: white;
+
+    transform: scale(0);
+    transition: ease 1s;
+    transition-delay: 1s;
+    z-index: 2;
+
+    text-align: center;
+    align-items: center;
+}
+
+.show {
+    transform: scale(1);
+}
+
+.carousel {
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    gap: 50px;
+}
+
+.SAE {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(51, 128, 196);
+    padding: 30px;
+}
+
+.SAE:hover {
+    background-color: rgb(84, 149, 205);
+    cursor: pointer;
 }
