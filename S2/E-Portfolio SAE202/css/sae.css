@@ -1,3 +1,4 @@
+/* INIT */
 @font-face {
     font-family: "Kusanagi";
     src: url(/fonts/Kusanagi.otf);
@@ -32,6 +33,7 @@ h1 {
     justify-content: left;
     margin-bottom: 150px;
     margin-left: 50px;
+    width: 40px;
 }
 
 main {
@@ -53,59 +55,7 @@ label {
     margin-right: 50px;
 }
 
-/* SAE's List random letters */
-.decode-text {
-    width: 100%;
-    font-size: 30px;
-    text-align: center;
-}
-
-.space {
-    display: inline-block;
-    width: 10px;
-}
-
-.text-animation {
-    display: inline-block;
-    position: relative;
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-
-    &:before {
-        content: "";
-        color: rgb(255, 255, 255);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        background: #ffffff;
-        width: 0;
-        height: 1.2em;
-        -webkit-transform: translate(-50%, -55%);
-        -ms-transform: translate(-50%, -55%);
-        transform: translate(-50%, -55%);
-    }
-
-    &.state-1 {
-        &:before {
-            width: 1px;
-        }
-    }
-
-    &.state-2 {
-        &:before {
-            width: 0.9em;
-        }
-    }
-
-    &.state-3 {
-        color: rgb(255, 255, 255);
-
-        &:before {
-            width: 0;
-        }
-    }
-}
-
+/* Filters */
 .zoneFiltres {
     font-size: larger;
     text-decoration: none;
@@ -120,6 +70,7 @@ label {
     margin-bottom: 50px;
 }
 
+/* Show page */
 .page_show {
     margin-top: 50px;
     color: white;
@@ -137,11 +88,16 @@ label {
     transform: scale(1);
 }
 
-.carousel {
-    width: auto;
-    overflow: hidden;
+/* Page Show Wrapper (CSS Grid) */
+.pageshow-wrapper {
     display: flex;
-    gap: 50px;
+
+}
+
+/* Carousel show, slide and exec */
+.carousel {
+    width: 650px;
+    overflow: hidden;
 }
 
 .SAE {
@@ -149,9 +105,33 @@ label {
     flex-direction: column;
     background-color: rgb(51, 128, 196);
     padding: 30px;
+    transition: ease 0.5s;
 }
 
 .SAE:hover {
     background-color: rgb(84, 149, 205);
     cursor: pointer;
+}
+
+.carousel-slideR {
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.carousel-slideR:hover {
+    transform: translateX(10px);
+}
+
+.carousel-slideL {
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.carousel-slideL:hover {
+    transform: translateX(10px);
+}
+
+.carousel-elements {
+    display: flex;
+    gap: 50px;
 }
