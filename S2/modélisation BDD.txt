@@ -1,0 +1,36 @@
+BDD :
+
+N°SAE
+Titre SAE
+N°Ressources
+Titre Ressource
+Compétences
+N°AC
+Titre AC
+Semestre
+Description SAE
+Année
+
+MCD =
+AC -> ID_AC, Titre AC, Compétence, Année
+SAE -> ID_SAE, Titre SAE, Description SAE, Semestre
+Ressources -> ID_Ressources, Titre_Ressource
+
+Liaison entre AC et SAE : Valider
+Liaison entre SAE et Ressources : Mobiliser
+
+1 AC peut être validée par n SAE
+1 SAE peut être validée par n AC
+donc n:n
+
+1 SAE mobilise n ressources
+1 ressource mobilise n SAE
+Donc n:n
+
+MLD =
+
+Requettes SQL =
+1 qui permet d'afficher toutes les SAE
+1 qui permet d'afficher la liste des compétences
+1 qui permet d'afficher la liste des apprentissages critiques avec leurs titres
+1 qui permet d'afficher la liste des ressources de chaque SAE
