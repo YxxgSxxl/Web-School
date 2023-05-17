@@ -73,10 +73,26 @@ input {
 
     text-align: center;
     align-items: center;
+
+    display: flex;
 }
 
 .show {
     transform: scale(1);
+}
+
+
+/* Page Show Wrapper (CSS Grid) */
+.pageshow-wrapper {
+    text-decoration: none;
+}
+
+.space {
+    height: 20px;
+}
+
+div.apo {
+    height: 20px;
 }
 
 /* Filters */
@@ -99,33 +115,6 @@ input {
     height: 50px;
 }
 
-/* Page Show Wrapper (CSS Grid) */
-.pageshow-wrapper {
-    display: flex;
-}
-
-.space {
-    height: 20px;
-}
-
-div.apo {
-    height: 20px;
-}
-
-.semestres {
-    background-color: rgba(60, 195, 219, 0.5);
-    border-radius: 10px;
-    padding: 30px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.semestres:hover {
-    background-color: rgba(60, 195, 219, 0.6);
-}
-
 /* Carousel show, slide and exec */
 .carousel {
     width: 650px;
@@ -145,21 +134,21 @@ div.apo {
     cursor: pointer;
 }
 
-.carousel-slideR {
-    cursor: pointer;
-    transition: all 1s;
-}
-
-.carousel-slideR:hover {
-    transform: translateX(10px);
-}
-
 .carousel-slideL {
     cursor: pointer;
     transition: all 1s;
 }
 
 .carousel-slideL:hover {
+    transform: translateX(-10px);
+}
+
+.carousel-slideR {
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.carousel-slideR:hover {
     transform: translateX(10px);
 }
 
