@@ -1,0 +1,157 @@
+/* INIT */
+@font-face {
+    font-family: "Kusanagi";
+    src: url(/fonts/Kusanagi.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -9;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: "Kusanagi";
+    font-size: 35px;
+    color: white;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 150px;
+    margin-left: 50px;
+    width: 40px;
+}
+
+main {
+    display: flex;
+    gap: 50px;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+
+    padding-left: 100px;
+    padding-right: 550px;
+}
+
+main div {
+    font-size: larger;
+}
+
+label {
+    margin-right: 50px;
+    position: relative;
+
+    color: #000000;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+/* Filters */
+.zoneFiltres {
+    font-size: larger;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: left;
+    text-align: center;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+    height: 100px;
+
+    margin-left: 100px;
+    margin-bottom: 50px;
+
+    user-select: none;
+}
+
+/* Hide Checkboxes */
+.zoneFiltres input {
+    /* visibility: hidden; */
+    margin: 0;
+}
+
+/* Show page */
+.page_show {
+    margin-top: 50px;
+    color: white;
+
+    transform: scale(0);
+    transition: ease 1s;
+    transition-delay: 1s;
+    z-index: 2;
+
+    text-align: center;
+    align-items: center;
+}
+
+.show {
+    transform: scale(1);
+}
+
+/* Page Show Wrapper (CSS Grid) */
+.pageshow-wrapper {
+    display: flex;
+}
+
+.decode-text {
+    user-select: none;
+}
+
+/* Carousel show, slide and exec */
+.carousel {
+    width: 650px;
+    overflow: hidden;
+}
+
+.SAE {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(51, 128, 196);
+    padding: 30px;
+    transition: ease 0.5s;
+    user-select: none;
+}
+
+.SAE:hover {
+    background-color: rgb(84, 149, 205);
+    cursor: pointer;
+}
+
+.carousel-slideR {
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.carousel-slideR:hover {
+    transform: translateX(10px);
+}
+
+.carousel-slideL {
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.carousel-slideL:hover {
+    transform: translateX(10px);
+}
+
+.carousel-elements {
+    display: flex;
+    gap: 50px;
+}
