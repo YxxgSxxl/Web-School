@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload</title>
+  <style>
+    form {width: 300px;}
+  </style>    
+</head>
+
+<body>
+  <form action="upload.php" method="post" enctype="multipart/form-data">
+    <fieldset>
+      <legend><strong>Déposez votre photo</strong></legend>
+      <input type="hidden" name="MAX_FILE_SIZE" value="500000">
+      <input type="file" name="photo" accept="image/gif, image/jpeg, image/png">
+    </fieldset>
+    <input type="submit" name="envoyer" value="Envoyer">
+  </form>
+</body>
+</html>
