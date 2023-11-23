@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(66, 145, 210);
+    height: 80px;
+    padding: 0px 50px 0px 50px;
+    display: flex;
+    align-items: center;
+}
+
+
+.tab:nth-child(2) {
+    margin-left: auto;
+}
+
+.tab {
+    color: white;
+    margin-right: 30px;
+}
+
+.square {
+    background-color: purple;
+    height: 50px;
+    width: 50px;
+    transition: ease 1s;
+}
+
+.square:hover {
+    transform: translateX(50px);
+    transform: translateX(100px) rotate(90deg);
+}
+
+.squarepapa:hover>.square {
+    width: 50px;
+    height: 50px;
+}

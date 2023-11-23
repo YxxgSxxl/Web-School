@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plugins & Accessibilité</title>
+    <link rel="stylesheet" href="./styles/stylesheet.css">
+</head>
+
+<body>
+    <header>
+        <a class="logo" href="#home">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                </path>
+            </svg>
+        </a>
+
+        <div class="tabs">
+            <a class="tab" href="#logobi">Logobi</a>
+            <a class="tab" href="#marseille">Marseille</a>
+            <a class="tab" href="#paris">Paris</a>
+        </div>
+
+        <div class="burger">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </div>
+    </header>
+
+    <main>
+        <section class="b">
+            <div class="a" data-speed=0.5></div>
+            <div class="a"></div>
+            <div class="a" data-speed=2></div>
+        </section>
+        <section class="b">
+            <div class="a" data-speed=0.5></div>
+            <div class="a"></div>
+            <div class="a" data-speed=2></div>
+        </section>
+        <section class="b">
+            <div class="a" data-speed=0.5></div>
+            <div></div>
+            <div class="a" data-speed=2></div>
+        </section>
+        <section class="b">
+            <div class="a" data-speed=0.5></div>
+            <div class="a"></div>
+            <div class="a" data-speed=2></div>
+        </section>
+    </main>
+
+    <script>
+        var paraEl = document.querySelectorAll("[data-speed]");
+        function parallax() {
+            paraEl.forEach(e => {
+                var rect = e.getBoundingClientRect();
+                var transY = e.dataset.offset || 0;
+                /* Calcule de la position d'origine du centre de la div par rapport au haut de l'écran - suppression de l'offset pour avoir la position d'origine */
+                var posiOrigin = rect.top - transY + rect.height / 2;
+
+                /* Calcule de la position par rapport au centre du viewport - application de la "vitesse" */
+                var offset = (posiOrigin - window.innerHeight / 2) * e.dataset.speed;
+
+                /* Première méthode qui pose problème pour les éléments éloignés */
+                //var offset = window.scrollY * (1-e.dataset.speed);
+
+                /* Test pour n'appliquer l'offset qu'aux éléments dans le viewport et éviter une scrollbar trop grande */
+                if (rect.top < window.innerHeight ||
+                    offset < window.innerHeight / 2) {
+                    /* Sauvegarde et application de l'offset */
+                    e.dataset.offset = offset;
+                    e.style.transform = `translateY(${offset}px)`;
+                }
+            })
+        }
+        window.addEventListener("scroll", parallax, { passive: true });
+        parallax();
+    </script>
+
+</body>
+
+</html>

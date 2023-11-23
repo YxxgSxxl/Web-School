@@ -1,0 +1,117 @@
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.box {
+    background-color: rgb(174, 244, 193);
+    height: 600px;
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex1 {
+    display: flex;
+    justify-content: center;
+    background-color: blue;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 500px;
+}
+
+.flex1 * {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.flex2 {
+    display: flex;
+    justify-content: center;
+    background-color: blue;
+    padding: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    width: 500px;
+}
+
+.flex2 * {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.flex3 {
+    display: flex;
+    justify-content: center;
+    background-color: blue;
+    padding: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    width: 500px;
+}
+
+.flex3 * {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.text9 {
+    flex: 1;
+}
+
+.text6 {
+    margin-left: auto;
+}
+
+.flex4 {
+    display: flex;
+    justify-content: center;
+    background-color: blue;
+    padding: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 500px;
+}
+
+.flex4 * {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.flex4 .texte11 {
+    flex: none;
+}

@@ -1,0 +1,77 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: monospace;
+}
+
+header {
+    background-color: rgba(233, 226, 226, 0.896);
+    height: 80px;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a svg {
+    transition: ease 0.5s;
+}
+
+a svg:hover {
+    cursor: pointer;
+    stroke: #8fd6b4;
+}
+
+.logo {
+    margin-left: 40px;
+}
+
+.tabs {
+    display: flex;
+    gap: 100px;
+}
+
+.tab {
+    transition: ease 0.8s;
+}
+
+.tab:hover {
+    font-size: 20px;
+    color: #8fd6b4;
+    cursor: pointer;
+}
+
+.burger {
+    margin-right: 40px;
+}
+
+.burger svg {
+    transition: ease 0.5s;
+    cursor: pointer;
+}
+
+.burger svg:hover {
+    stroke: #8fd6b4;
+}
+
+main {
+    height: 400vh;
+}
+
+section.b {
+    height: 100vh;
+    display: flex;
+}
+
+div.a {
+    background: #96d1b4;
+    margin: 10%;
+    width: 20%;
+    height: 20%;
+}
