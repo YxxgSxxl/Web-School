@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    background-color: rgb(0, 175, 206);
+    color: whitesmoke;
+}
+
+.barres {
+    background: rgb(255, 255, 255);
+    margin: 2px;
+    height: 20px;
+    width: 50px;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images Optimisation</title>
+    <link rel="stylesheet" href="styles/stylesheet.css">
+</head>
+
+<body>
+    <div class="grid">
+        <img loading="lazy" src="img/processed/1_processed.jpg" alt="">
+        <img loading="lazy" src="img/processed/2_processed.jpg" alt="">
+        <img loading="lazy" src="img/processed/3_processed.jpg" alt="">
+        <img loading="lazy" src="img/processed/4_processed.jpg" alt="">
+        <img loading="lazy" src="img/original/5.jpg" alt="">
+    </div>
+
+    <img loading="lazy" sizes="(max-width: 1400px) 100vw, 1400px" srcset="
+        img/processed/three/5_dsm7nc_c_scale,w_200.jpg 200w,
+        img/processed/three/5_dsm7nc_c_scale,w_479.jpg 479w,
+        img/processed/three/5_dsm7nc_c_scale,w_680.jpg 680w,
+        img/processed/three/5_dsm7nc_c_scale,w_830.jpg 830w,
+        img/processed/three/5_dsm7nc_c_scale,w_953.jpg 953w,
+        img/processed/three/5_dsm7nc_c_scale,w_1023.jpg 1023w,
+        img/processed/three/5_dsm7nc_c_scale,w_1098.jpg 1098w,
+        img/processed/three/5_dsm7nc_c_scale,w_1184.jpg 1184w,
+        img/processed/three/5_dsm7nc_c_scale,w_1326.jpg 1326w,
+        img/processed/three/5_dsm7nc_c_scale,w_1390.jpg 1390w,
+        img/processed/three/5_dsm7nc_c_scale,w_1400.jpg 1400w" src="img/original/5.jpg" alt="">
+</body>
+
+</html>

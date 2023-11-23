@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: auto auto auto auto;
+    gap: 5px;
+
+    justify-content: center;
+    margin-top: 200px;
+}
