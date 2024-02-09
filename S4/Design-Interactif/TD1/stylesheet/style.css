@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(13, 13, 13);
+}
+
+.carre {
+    background-color: rgb(226, 147, 43);
+    width: 100px;
+    height: 100px;
+}
