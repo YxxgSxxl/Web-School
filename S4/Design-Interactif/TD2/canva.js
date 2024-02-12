@@ -26,7 +26,8 @@ function update() {
 function afficher() {
 
     // CREATE A RECTANGLE
-    ctx.fillStyle = "blue";
+    ctx.fillStyle = "lightblue";
+    ctx.moveTo(10, 100);
     ctx.fillRect(20, 20, 100, 100);
 
     //Create a STROKE
