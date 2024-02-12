@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TD4</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <!-- Assets -->
+        <a-assets>
+            <img id="sky" src="/3d-assets/sky.jpg">
+            <img id="plane-texture" src="/3d-assets/plane-texture.png">
+            
+            <a-asset-item id="character" src="/3d-assets/DS_Character.glb"></a-asset-item>
+        </a-assets>
+        
+        <!-- Sky -->
+        <a-sky src="#sky" animation="property: position; from: 1 40 50; to: 1 8 -50; dur: 3000; easing: linear; loop: true" repeat="2" direction="alternate"></a-sky>
+
+        <!-- Character -->
+        <a-entity position="0 -0.5 -4"  gltf-model="#character"></a-entity>
+
+        <!-- Plane -->
+        <a-plane src="#plane-texture" position="0 -0.5 -5" rotation="-90 0 0" width="4" height="4" color="white" opacity="0.3"></a-plane>
+
+      </a-scene>
+</body>
+</html>
