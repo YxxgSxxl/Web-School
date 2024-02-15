@@ -15,12 +15,12 @@ let xPath = 550;
 let yPath = 500;
 
 let xCube = 600;
-let yCube = 500;
+let yCube = 200;
 
 let vxCube = 1.2;
 let vyCube = 1.2;
 
-gCube = 1.1; // Force de la gravité
+gravity = 1.1; // Force de la gravité
 
 let deltaX = 0;
 let deltaY = 0;
@@ -33,12 +33,12 @@ afficher();
 
 function update() {
      // Appliquer la gravité
-     yCube -= gCube;
+     yCube -= gravity;
      yCube += vyCube;
  
      // Vérifier si le cube touche le sol
      if (yCube + 20 > h) { // 20 est la hauteur du cube
-        yCube -= gCube;
+        yCube -= gravity;
 
      }
 }
@@ -92,7 +92,3 @@ function keyPress(e) {
     afficher(); // Redessine le cube après le déplacement
     // cube.style.transform = `translate(${x}px, ${y}px)`;
 }
-if (press) {
-
-}
-
