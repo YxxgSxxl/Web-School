@@ -20,7 +20,7 @@ let yCube = 200;
 let vxCube = 1.2;
 let vyCube = 1.2;
 
-gravity = 1.1; // Force de la gravité
+gravity = 5; // Force de la gravité
 
 let deltaX = 0;
 let deltaY = 0;
@@ -32,23 +32,30 @@ let press = body.addEventListener('keydown', keyPress);
 afficher();
 
 function update() {
-     // Appliquer la gravité
-     yCube -= gravity;
-     yCube += vyCube;
- 
+    if (yCube < h) {
+        // Appliquer la gravité
+        yCube += gravity;
+        
+    //    console.log(yCube);
+    }   
+    else {
+        yCube = 0;
+    }
      // Vérifier si le cube touche le sol
-     if (yCube + 20 > h) { // 20 est la hauteur du cube
-        yCube -= gravity;
+    //  if (yCube + 20 > h) { // 20 est la hauteur du cube
+    //     yCube -= gravity;
 
-     }
+    //  }
+
 }
 
 function afficher() {
     // Cube Canvas init
     ctx.clearRect(0, 0, w, h); // Efface le canvas avant de redessiner
-    ctx.fillStyle = "blue";
+    ctx.fillStyle = "orange";
     ctx.fillRect(xCube, yCube, 20, 20);
 
+    update();
     // Line Canvas init
     ctx.beginPath();
     ctx.strokeStyle = `rgba(46, 138, 138, 1)`;
@@ -58,37 +65,49 @@ function afficher() {
     ctx.stroke();
 
     // requestAnimationFrame
-    window.requestAnimationFrame(update);
+    window.requestAnimationFrame(afficher);
+}
+
+
+function keyPress(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    switch (e.key) {
+        case ' ':
+            console.log(e.code);
+            yCube -= 100;
+            break;
+    }
 }
 
 
 // Fonction pour savoir quel touche est pressée
-function keyPress(e) {
-    e.preventDefault(); // Ajouté pour empêcher le comportement par défaut des touches (scroll, etc.)
-    e.stopPropagation();
-    // console.log(e.key); // Debug
-    switch (e.key) {
-        case 'ArrowUp':
-            yCube -= 10; // Modification pour déplacer le cube sur le canvas
-            console.log("up");
-            break;
-        case 'ArrowRight':
-            xCube += 10;
-            console.log("right");
-            break;
-        case 'ArrowDown':
-            yCube += 10;
-            console.log("down");
-            break;
-        case 'ArrowLeft':
-            xCube -= 10;
-            console.log("left");
-            break;
-        case 'm':
-            body.remove();
-        default:
-            break;
-    }
-    afficher(); // Redessine le cube après le déplacement
-    // cube.style.transform = `translate(${x}px, ${y}px)`;
-}
+// function keyPress(e) {
+//     e.preventDefault(); // Ajouté pour empêcher le comportement par défaut des touches (scroll, etc.)
+//     e.stopPropagation();
+//     // console.log(e.key); // Debug
+//     switch (e.key) {
+//         case 'ArrowUp':
+//             yCube -= 10 * vyCube; // Modification pour déplacer le cube sur le canvas
+//             console.log("up");
+//             break;                
+//         case 'ArrowRight':
+//             xCube += 10;
+//             console.log("right");
+//             break;
+//         case 'ArrowDown':
+//             yCube += 10;
+//             console.log("down");
+//             break;
+//         case 'ArrowLeft':
+//             xCube -= 10;
+//             console.log("left");
+//             break;
+//         case 'm':
+//             body.remove();
+//         default:
+//             break;
+//     }
+//     afficher(); // Redessine le cube après le déplacement
+//     // cube.style.transform = `translate(${x}px, ${y}px)`;
+// }
