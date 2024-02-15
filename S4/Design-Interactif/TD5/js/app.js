@@ -20,14 +20,27 @@ let yCube = 500;
 let vxCube = 1.2;
 let vyCube = 1.2;
 
+gCube = 1.1; // Force de la gravité
+
 let deltaX = 0;
 let deltaY = 0;
+
+// Récupération d'informations touches
+let press = body.addEventListener('keydown', keyPress);
+
 
 afficher();
 
 function update() {
-    x += 2;
-    y += 2;
+     // Appliquer la gravité
+     yCube -= gCube;
+     yCube += vyCube;
+ 
+     // Vérifier si le cube touche le sol
+     if (yCube + 20 > h) { // 20 est la hauteur du cube
+        yCube -= gCube;
+
+     }
 }
 
 function afficher() {
@@ -48,8 +61,6 @@ function afficher() {
     window.requestAnimationFrame(update);
 }
 
-// Récupération d'informations touches
-body.addEventListener('keydown', keyPress);
 
 // Fonction pour savoir quel touche est pressée
 function keyPress(e) {
@@ -58,7 +69,7 @@ function keyPress(e) {
     // console.log(e.key); // Debug
     switch (e.key) {
         case 'ArrowUp':
-            yCube -= 10 * vxCube; // Modification pour déplacer le cube sur le canvas
+            yCube -= 10; // Modification pour déplacer le cube sur le canvas
             console.log("up");
             break;
         case 'ArrowRight':
@@ -79,6 +90,9 @@ function keyPress(e) {
             break;
     }
     afficher(); // Redessine le cube après le déplacement
-    cube.style.transform = `translate(${x}px, ${y}px)`;
+    // cube.style.transform = `translate(${x}px, ${y}px)`;
+}
+if (press) {
+
 }
 
