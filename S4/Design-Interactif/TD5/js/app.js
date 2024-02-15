@@ -75,7 +75,7 @@ function keyPress(e) {
     switch (e.key) {
         case ' ':
             console.log(e.code);
-            yCube -= 100;
+            yCube -= 20;
             break;
     }
 }
