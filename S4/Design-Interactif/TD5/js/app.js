@@ -10,10 +10,9 @@ canvApp.height = h;
 canvApp.width = w;
 
 let body = document.querySelector("body"); // Déclaration de la page
-let cube = document.querySelector(".cube");
 
-let x = 0;
-let y = 0;
+let xPath = 550;
+let yPath = 500;
 
 let xCube = 600;
 let yCube = 500;
@@ -36,7 +35,14 @@ function afficher() {
     ctx.clearRect(0, 0, w, h); // Efface le canvas avant de redessiner
     ctx.fillStyle = "blue";
     ctx.fillRect(xCube, yCube, 20, 20);
-    ctx.moveTo(x, y);
+
+    // Line Canvas init
+    ctx.beginPath();
+    ctx.strokeStyle = `rgba(46, 138, 138, 1)`;
+    ctx.lineWidth = 5;
+    ctx.moveTo(700, 550);
+    ctx.lineTo(500, 550);
+    ctx.stroke();
 
     // requestAnimationFrame
     window.requestAnimationFrame(update);
