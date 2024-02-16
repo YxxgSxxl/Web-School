@@ -18,9 +18,9 @@ function processData(partitions, etudiants) {
     // }); + "</div>";
 
 
-    etudiants.forEach(etudiant => {
-        main.innerHTML += `<div> ${etudiant.nom_disp} ${etudiant.prenom} </div> `
-    });
+    // etudiants.forEach(etudiant => {
+    //     main.innerHTML += `<div> ${etudiant.nom_disp} ${etudiant.prenom} </div> `
+    // });
 }
 
 go();
