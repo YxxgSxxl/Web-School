@@ -18,9 +18,16 @@ function processData(partitions, etudiants) {
     // }); + "</div>";
 
 
-    // etudiants.forEach(etudiant => {
-    //     main.innerHTML += `<div> ${etudiant.nom_disp} ${etudiant.prenom} </div> `
-    // });
+    etudiants.sort((a,b)=>{
+        if(a.nom_disp < b.nom_disp){
+            return -1
+        } else {
+            return 1
+        }
+    });
+    etudiants.forEach(etudiant => {
+        main.innerHTML += `<div> ${etudiant.nom_disp} ${etudiant.prenom} </div> `
+    });
 }
 
 go();
